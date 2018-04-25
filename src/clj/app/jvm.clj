@@ -6,6 +6,6 @@
 (defn -handleRequest
   [s]
   (time
-   (let [cnt (count (app.core/core-test 5000))]
+   (let [cnt (count (app.core/core-test 1000))]
      (println cnt)
      cnt)))
