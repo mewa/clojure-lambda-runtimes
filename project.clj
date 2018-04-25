@@ -24,12 +24,21 @@
                                    :target :nodejs
                                    :optimizations :none
                                    }},
-                       {:id "min"
+                       {:id "heavy"
                         :source-paths ["src/cljs", "src/cljc"]
                         :compiler {
-                                   :output-dir "target/js"
-                                   :output-to "target/js/cljstest.js"
+                                   :output-dir "target/js/heavy"
+                                   :output-to "target/js/heavy.js"
                                    :main app.node
+                                   :target :nodejs
+                                   :optimizations :simple
+                                   }}
+                       {:id "light"
+                        :source-paths ["src/cljs", "src/cljc"]
+                        :compiler {
+                                   :output-dir "target/js/light"
+                                   :output-to "target/js/light.js"
+                                   :main app.nodelight
                                    :target :nodejs
                                    :optimizations :simple
                                    }}]}

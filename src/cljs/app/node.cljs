@@ -9,4 +9,4 @@
                    (println cnt)
                    cnt))))
 
-(set! (.-exports js/module) (clj->js {:mewa run}))
+(set! (.-exports js/module) (clj->js {:run run}))
