@@ -12,7 +12,8 @@
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.16-SNAPSHOT"]]
   :source-paths ["src/cljc", "src/clj"]
-  :aot :all
+  :profiles {:heavy {:aot [app.jvm]}
+             :light {:aot [app.jvmlight]}}
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/dev", "src/cljs", "src/cljc"]
                         :figwheel true
